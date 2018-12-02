@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sudeepasa logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="o1A-J9-e1U">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sudeepasa logo" translatesAutoresizingMaskIntoConstraints="NO" id="o1A-J9-e1U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sudeepasa logo-1" width="1024" height="1024"/>
+        <image name="sudeepasa logo" width="1024" height="1024"/>
     </resources>
 </document>
