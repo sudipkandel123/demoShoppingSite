@@ -8,6 +8,7 @@
 
 import Foundation
 class DataService {
+    
     static let instance = DataService() //a singleton which is static ie only one instance of the class can be created
     //now feed the data inside a array from the initializer in struct Category
     private let categories =
@@ -56,6 +57,7 @@ class DataService {
         return categories
         
     }
+
     func getProducts(forCategoryTitle title : String) -> [Product]
     {
         switch title

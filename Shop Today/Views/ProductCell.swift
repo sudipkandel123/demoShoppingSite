@@ -13,4 +13,14 @@ class ProductCell: UICollectionViewCell {
     @IBOutlet weak var productTitle:UILabel!
     @IBOutlet weak var productPrice:UILabel!
     
+    func updateProduct(product : Product)
+    {
+        //from struct passing the product value to the collection cell view
+    
+        productImage.image = UIImage(named: product.imageName)
+        productTitle.text = product.title
+        productPrice.text = product.price
+        
+    }
+    
 }

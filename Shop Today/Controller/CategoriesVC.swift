@@ -34,8 +34,41 @@ class CategoriesVC: UIViewController , UITableViewDataSource , UITableViewDelega
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToProducts", sender: self)
+        let category = DataService.instance.getCategories()[indexPath.row]
+        //when the indexpath.row is selected then perform segue where sender is selected path
+        performSegue(withIdentifier: "goToProducts", sender: category)
+        //perform segue for each category selected
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        
+        //to change the nav bar in next segued view
+        let barBtn = UIBarButtonItem() //create a new bar button item
+        barBtn.title = ""
+        navigationItem.backBarButtonItem = barBtn
+        
+        
+        //before segue
+        
+        
+        if let productVC = segue.destination as? ProductsVC
+        //if the destination is ProductsVC ie product view window
+        
+        {
+            //MARK: - to remove while deploying
+            //this is just for build time not for production , we could have used if let or guard but category is not an option it's cumpulsion to be stricly category, so we assert to check if category is nil
+            assert(sender as? Category != nil)
+            
+            
+            //send the struct title and the image to the respective view
+            productVC.initProducts(category: sender as! Category)
+           
+        }
+        
+        
+    }
+    
+    
 
 
 }
