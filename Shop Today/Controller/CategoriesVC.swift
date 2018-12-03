@@ -33,9 +33,9 @@ class CategoriesVC: UIViewController , UITableViewDataSource , UITableViewDelega
             return CategoryCellTV()
         }
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToProducts", sender: self)
+    }
 
 
 }

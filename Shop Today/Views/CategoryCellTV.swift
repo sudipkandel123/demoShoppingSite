@@ -4,7 +4,7 @@
 //
 //  Created by Sudip on 12/2/18.
 //  Copyright © 2018 Sudeepasa. All rights reserved.
-// for the table view cell
+// for the table view cell to present the data in the tableviewcell
 
 import UIKit
 
